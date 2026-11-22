@@ -1,0 +1,127 @@
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.write { border-right: 1px solid #ddd; min-width: 0; }
+
+#poem {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  resize: none;
+  padding: 24px;
+  font: inherit;
+  font-size: 19px;
+  line-height: 1.65;
+  color: #111;
+  background: transparent;
+}
+
+.tools {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  min-width: 0;
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+}
+
+.panel + .panel { border-top: 1px solid #ddd; }
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  white-space: nowrap;
+}
+
+.search { display: flex; gap: 8px; flex: 1; }
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 15px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  outline: none;
+  background: #fff;
+  color: #111;
+}
+
+.search input:focus { border-color: #999; }
+
+.search button {
+  font: inherit;
+  font-size: 15px;
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background: #f5f5f5;
+  color: #111;
+  cursor: pointer;
+}
+
+.search button:hover { background: #ececec; }
+
+.results {
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.results li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 16px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.results li:hover { background: #f2f2f2; }
+
+.results li .meta {
+  color: #999;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.results li.status {
+  color: #999;
+  font-size: 14px;
+  cursor: default;
+}
+
+.results li.status:hover { background: none; }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>poetry machine</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="layout">
+  <section class="write">
+    <textarea id="poem" placeholder="write here" spellcheck="true"></textarea>
+  </section>
+  <aside class="tools">
+    <section class="panel">
+      <header class="panel-head">
+        <h2>rhymes</h2>
+        <form class="search" data-kind="rhyme">
+          <input type="text" id="rhyme-input" placeholder="a word" autocomplete="off">
+          <button type="submit">find</button>
+        </form>
+      </header>
+      <ul class="results" id="rhyme-results"></ul>
+    </section>
+    <section class="panel">
+      <header class="panel-head">
+        <h2>synonyms</h2>
+        <form class="search" data-kind="syn">
+          <input type="text" id="syn-input" placeholder="a word" autocomplete="off">
+          <button type="submit">find</button>
+        </form>
+      </header>
+      <ul class="results" id="syn-results"></ul>
+    </section>
+  </aside>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
